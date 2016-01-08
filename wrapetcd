@@ -1,0 +1,4 @@
+#!/bin/bash
+
+IP=`ip addr | grep 'global eth0' | awk '{print $2}' | cut -f1  -d'/'`
+etcd -addr $IP:4001
